@@ -1,0 +1,6 @@
+framework module Pods_SillyUber {
+  umbrella header "Pods-SillyUber-umbrella.h"
+
+  export *
+  module * { export * }
+}
