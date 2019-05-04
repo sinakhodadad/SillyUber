@@ -14,10 +14,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
     // from main story board mapViewOutlet -> import Mapkit -> MKMapViewDelegate -> mapView.delegate = self
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var actionButton: RoundedShadowButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
     }
+    
+    @IBAction func actionButtonPressed(_ sender: Any) {
+        actionButton.animateButton(shouldLoad: true, withMessage: nil)
+    }
+    
 
 
 }

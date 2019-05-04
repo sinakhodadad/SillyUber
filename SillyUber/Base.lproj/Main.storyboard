@@ -62,25 +62,6 @@
                                     <constraint firstAttribute="height" constant="30" id="19P-Xa-dMI"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCc-0y-hkc">
-                                <rect key="frame" x="16" y="587" width="343" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="QUV-ZC-IUc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
-                                <state key="normal" title="REQUEST UBER">
-                                    <color key="titleColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-JA-Wfj">
-                                <rect key="frame" x="299" y="519" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Fa4-aw-kMN"/>
-                                    <constraint firstAttribute="width" constant="60" id="xpX-er-d89"/>
-                                </constraints>
-                                <state key="normal" image="centerMapBtn"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-i3-lRS" customClass="RoundedShadowView" customModule="SillyUber" customModuleProvider="target">
                                 <rect key="frame" x="16" y="85" width="343" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,34 +135,69 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bhz-DQ-qFa">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCc-0y-hkc" customClass="RoundedShadowButton" customModule="SillyUber" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="QUV-ZC-IUc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
+                                        <state key="normal" title="REQUEST UBER">
+                                            <color key="titleColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="buJ-1e-Azo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Tuu-aL-8Pl"/>
+                                    <constraint firstItem="qCc-0y-hkc" firstAttribute="top" secondItem="Bhz-DQ-qFa" secondAttribute="top" id="gYU-8n-WqG"/>
+                                    <constraint firstItem="qCc-0y-hkc" firstAttribute="leading" secondItem="Bhz-DQ-qFa" secondAttribute="leading" constant="20" id="wNP-BO-Zs0"/>
+                                    <constraint firstAttribute="trailing" secondItem="qCc-0y-hkc" secondAttribute="trailing" constant="20" id="zRn-cC-aDk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-JA-Wfj">
+                                <rect key="frame" x="299" y="519" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Fa4-aw-kMN"/>
+                                    <constraint firstAttribute="width" constant="60" id="xpX-er-d89"/>
+                                </constraints>
+                                <state key="normal" image="centerMapBtn"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Bhz-DQ-qFa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2YZ-X7-3as"/>
                             <constraint firstItem="rc7-nx-t7p" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4M9-0U-KfC"/>
                             <constraint firstItem="hwt-LO-8ED" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="61f-EV-QtV"/>
-                            <constraint firstItem="qCc-0y-hkc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DJR-7S-Y4N"/>
                             <constraint firstItem="bh9-i3-lRS" firstAttribute="top" secondItem="hwt-LO-8ED" secondAttribute="bottom" constant="10" id="H0L-1d-keF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uaw-cB-KdT" secondAttribute="trailing" constant="20" id="IV5-DW-KbS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qCc-0y-hkc" secondAttribute="bottom" constant="20" id="K29-kG-2ZA"/>
-                            <constraint firstItem="qCc-0y-hkc" firstAttribute="top" secondItem="1yD-JA-Wfj" secondAttribute="bottom" constant="8" id="KXs-fD-ymI"/>
                             <constraint firstItem="Uaw-cB-KdT" firstAttribute="top" secondItem="rc7-nx-t7p" secondAttribute="bottom" id="Lgp-S6-s8f"/>
                             <constraint firstItem="Uaw-cB-KdT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SMC-2e-XRC"/>
                             <constraint firstItem="Dei-kF-wAE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XSv-aA-um3"/>
+                            <constraint firstItem="Bhz-DQ-qFa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="aBq-ok-t4I"/>
                             <constraint firstItem="bh9-i3-lRS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="epG-ak-9mh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1yD-JA-Wfj" secondAttribute="trailing" constant="16" id="fEv-0m-xTC"/>
                             <constraint firstItem="Dei-kF-wAE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hOk-pU-wn5"/>
                             <constraint firstItem="Dei-kF-wAE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iNM-07-s2j"/>
+                            <constraint firstItem="Bhz-DQ-qFa" firstAttribute="top" secondItem="1yD-JA-Wfj" secondAttribute="bottom" constant="8" id="k9q-Wo-arF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bh9-i3-lRS" secondAttribute="trailing" constant="16" id="mu5-k0-6Ud"/>
                             <constraint firstItem="rc7-nx-t7p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="n1m-mT-s5a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hwt-LO-8ED" secondAttribute="trailing" constant="16" id="p5o-zC-kvL"/>
                             <constraint firstItem="rc7-nx-t7p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pBt-Vd-4Xw"/>
+                            <constraint firstItem="Bhz-DQ-qFa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rk4-RB-5nq"/>
                             <constraint firstItem="Dei-kF-wAE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="s40-TG-MoX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qCc-0y-hkc" secondAttribute="trailing" constant="16" id="v6e-tv-gCN"/>
                             <constraint firstItem="hwt-LO-8ED" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="v84-Gp-smF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="actionButton" destination="qCc-0y-hkc" id="5TB-D0-bDi"/>
                         <outlet property="mapView" destination="Dei-kF-wAE" id="sdr-a5-Ohl"/>
                     </connections>
                 </viewController>
