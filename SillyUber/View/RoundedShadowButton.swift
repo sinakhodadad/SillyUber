@@ -29,6 +29,9 @@ class RoundedShadowButton: UIButton {
     }
     
     func animateButton(shouldLoad: Bool, withMessage message: String?){
+        
+        let spinner
+        
         if shouldLoad {
             self.setTitle("", for: .normal)
             UIView.animate(withDuration: 0.2, animations: {
