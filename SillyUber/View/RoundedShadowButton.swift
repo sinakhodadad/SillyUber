@@ -52,14 +52,12 @@ class RoundedShadowButton: UIButton {
                 self.frame = CGRect(x: self.frame.midX - (self.frame.height / 2) , y: self.frame.origin.y, width: self.frame.height, height: self.frame.height)
             }, completion: {(finished) in
                 if finished == true{
-
                     spinner.startAnimating()
                     // exactly center +1
                     spinner.center = CGPoint(x: self.frame.width / 2 + 1, y: self.frame.width/2 + 1)
                     UIView.animate(withDuration: 0.2, animations: {
                         spinner.alpha = 1.0
                     })
-                    
                 }
             })
             // don't let user click on button
